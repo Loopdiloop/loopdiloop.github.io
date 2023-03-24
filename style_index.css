@@ -1,0 +1,17 @@
+
+body {background-color: #303030;}
+h1 {color: #f5b2e8;}
+h2 {color: #f5b2e8;}
+h3 {color: #b2c6f5;}
+
+a {
+box-shadow: inset 0 0 0 0 #54b3d6;
+color: #b2c6f5;
+padding: 0 .25rem;
+margin: 0 -.25rem;
+transition: color .01s ease-in-out, box-shadow .01s ease-in-out;
+}
+
+a:hover {
+color: #f5e1b2;
+}
