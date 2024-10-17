@@ -16,14 +16,34 @@ a:hover {
 color: #f5e1b2;
 }
 
-#clock  {
-float:right;
-display:fixed;
+
+#clockContainer {
+    width: 330px;
+    height: 330px;
+    position: relative;
 }
 
+#clock  {
+    opacity: 1.0;
+}
+
+#otherclock {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#otherclock:hover {
+    opacity: 1.0;
+}
+
+
 div {
-    padding-left: 15px;
-    padding-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 p {
