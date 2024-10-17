@@ -15,3 +15,8 @@ transition: color .01s ease-in-out, box-shadow .01s ease-in-out;
 a:hover {
 color: #f5e1b2;
 }
+
+#clock  {
+float:right;
+display:fixed;
+}
