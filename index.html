@@ -132,7 +132,7 @@
                     }
 
                     void draw() {
-                        background(30, 200, 30);
+                        background(30, 30, 30);
                         
                         // Draw the clock background
                         fill(50);
@@ -150,9 +150,21 @@
                         fill(250,190,251);
                         textSize(20);
                         float rad = min(width, height)/2;
+
+                        //rotate(HALF_PI)
+                        
                         for ( int i = 0; i < 12; i++, angle_num -= TWO_PI / 12 ) {
-                            text(12- i, cx*0.96 + cos(angle_num-HALF_PI)*rad*0.85, cy*1.05 + sin(angle_num-HALF_PI)*rad*0.85);   
+                            //text(12- i, cx*0.96 + cos(angle_num-HALF_PI)*rad*0.85, cy*1.05 + sin(angle_num-HALF_PI)*rad*0.85);
+                            pushMatrix();
+                            float angle1 = radians(-90);
+                            translate(cx*0.96 + cos(angle_num-HALF_PI)*rad*0.85, cy*1.06 + sin(angle_num-HALF_PI)*rad*0.85);
+                            rotate(angle1);
+                            scale(1,-1);
+                            text(12- i, 0, 0);
+                            //line(0, 0, 150, 0);
+                            popMatrix();   
                         }
+                        //rotate(-HALF_PI)
                         
                         // Draw the hands of the clock
                         stroke(254, 221, 255);
